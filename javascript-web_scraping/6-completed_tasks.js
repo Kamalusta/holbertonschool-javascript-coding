@@ -18,7 +18,9 @@ request(args[2], function (error, response, body) {
         count++;
       }
     });
-    user[usernbr] = count;
+    if (count > 0) {
+      user[usernbr] = count;
+    }
     usernbr++;
     count = 0;
   }
