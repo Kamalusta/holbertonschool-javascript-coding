@@ -12,7 +12,7 @@ request(args[2], function (error, response, body) {
   const data = JSON.parse(body);
   data.results.forEach(function (film) {
     film.characters.forEach(function (charact) {
-      if (charact === 'https://swapi-api.hbtn.io/api/people/18/') {
+      if (charact.search('/18/') > 0) {
         count++;
       }
     });
